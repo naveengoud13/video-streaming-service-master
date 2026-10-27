@@ -36,11 +36,13 @@ import static kr.tinywind.springbootstreaming.config.Constants.VIDEO_ROOT;
 public class MainController {
     private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
+
     @Autowired
     private MaterialRepository materialRepository;
 
     @Autowired
     private MaterialDataRepository dataRepository;
+    
 
     private String decodePath(HttpServletRequest request, String prefix) throws UnsupportedEncodingException {
         return URLDecoder.decode(request.getRequestURI().replaceAll("[/]+", "/").substring(prefix.length()), "UTF-8");
