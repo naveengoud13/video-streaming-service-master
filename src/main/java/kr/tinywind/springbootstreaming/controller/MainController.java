@@ -53,6 +53,7 @@ public class MainController {
         return "show";
     }
 
+    // Handles requests to retrieve the file list.
     @RequestMapping("list")
     @ResponseBody
     public List<FileNode> listNoSubUri(HttpServletRequest request) throws UnsupportedEncodingException {
